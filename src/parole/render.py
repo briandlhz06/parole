@@ -86,5 +86,5 @@ def format_telegram(drifts: list[Drift], *, hostname: str = "") -> str:
         lines.append(f"... y {len(drifts) - 20} más")
     cmd = hozfix_command(unique_remediate(drifts))
     if cmd:
-        lines.append(f"corrié: {cmd}")
+        lines.append(f"corré: {cmd}")
     return "\n".join(lines)

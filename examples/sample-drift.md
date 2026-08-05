@@ -16,9 +16,9 @@ remediate: HOZ-NET-004
 no -> yes
 remediate: HOZ-SSH-002
 
-### HOZ-DRIFT-DOCK - Docker publish público nuevo (mailcowdockerized-nginx-mailcow-1)
+### HOZ-DRIFT-DOCK - Docker publish público nuevo (redis)
 
-(no estaba) -> mailcowdockerized-nginx-mailcow-1	mailcow/nginx:1.0	0.0.0.0:8081->80/tcp	Up 3 weeks
-remediate: HOZ-DOCK-010
+(no estaba) -> redis	redis:7	0.0.0.0:6379->6379/tcp	Up 1h
+remediate: HOZ-DOCK-6379
 
-Hozfix: `python -m hozfix --ids HOZ-NET-004,HOZ-SSH-002,HOZ-DOCK-010`
+Hozfix: `python -m hozfix --ids HOZ-NET-004,HOZ-SSH-002,HOZ-DOCK-6379`

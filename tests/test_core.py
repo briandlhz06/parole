@@ -133,7 +133,7 @@ def test_telegram_format_and_skip():
     assert "vps-01" in text
     assert "HOZ-DRIFT-NET-3306" in text
     assert "HOZ-NET-004" in text
-    assert "corrié: python -m hozfix --ids HOZ-NET-004" in text
+    assert "corré: python -m hozfix --ids HOZ-NET-004" in text
     assert "—" not in text
 
     ok, msg = send_telegram("", "", drifts, hostname="vps-01")
@@ -151,7 +151,7 @@ def test_telegram_format_and_skip():
     ok, msg = send_telegram("tok", "42", drifts, hostname="vps-01", sender=fake)
     assert ok and msg == "ok"
     assert sent and "HOZ-DRIFT-NET-3306" in sent[0][2]
-    assert "corrié: python -m hozfix --ids HOZ-NET-004" in sent[0][2]
+    assert "corré: python -m hozfix --ids HOZ-NET-004" in sent[0][2]
 
 
 def test_telegram_no_hint_without_remediate():
@@ -159,7 +159,7 @@ def test_telegram_no_hint_without_remediate():
         Drift(id="HOZ-DRIFT-NET-9999", title="Listener raro", before="x", after="y")
     ]
     text = format_telegram(drifts, hostname="vps-01")
-    assert "corrié" not in text
+    assert "corré" not in text
     assert "hozfix" not in text
 
 
