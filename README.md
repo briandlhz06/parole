@@ -83,4 +83,4 @@ Sample completo: [`examples/sample-drift.md`](examples/sample-drift.md)
 
 `0` limpio. `1` error. `2` hay drift.
 
-MIT
+MIT - [Brian De La Hoz](https://briandlhz.space)
